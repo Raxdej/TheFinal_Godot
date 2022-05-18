@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/World1/GrassElements.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/World1/Tree.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/World1/Gass/Grass.tscn" type="PackedScene" id=4]
+
+[node name="Hyrule" type="Node2D"]
+
+[node name="GrassElements" parent="." instance=ExtResource( 2 )]
+collision_mask = 2
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+
+[node name="Camera2D2" type="Camera2D" parent="YSort/Player"]
+current = true
+
+[node name="Node" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( -33.0001, -579.999 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree2" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 142, -624 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree3" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 328.001, -639.999 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree4" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 509.999, -612 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree5" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 665, -615 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree6" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( -195, -639.999 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree7" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( -385, -669 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree8" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( -535, -659.001 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree9" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 842, -635.001 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree10" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 1000, -612 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Grass" type="YSort" parent="YSort"]
+
+[node name="Grass" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( 299, 270 )
+
+[node name="Grass2" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( 233, 313 )
+
+[node name="Grass3" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( 243, 382 )
+
+[node name="Grass4" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( -1223, 43 )
+
+[node name="Grass5" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( -1159, 64 )
+
+[node name="Grass6" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( -1093, 30 )
