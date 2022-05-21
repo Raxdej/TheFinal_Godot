@@ -14,15 +14,23 @@ func _process(delta):
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 1
 		direction = 2
+		DisabledAttack()
+		isAttaking = false
 	if Input.is_action_pressed("ui_up"):
 		velocity.y -= 1
 		direction = 1
+		DisabledAttack()
+		isAttaking = false
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
 		direction = 3
+		DisabledAttack()
+		isAttaking = false
 	if Input.is_action_pressed("ui_down"):
 		velocity.y += 1
 		direction = 0
+		DisabledAttack()
+		isAttaking = false
 	if Input.is_action_pressed("ui_accept") && (velocity == Vector2(0, 0)):
 		attack_animation(direction)
 		
@@ -47,6 +55,7 @@ func player_animation(velocity):
 
 #Make the attack animation depending on where it points
 func attack_animation(direction):
+	isAttaking = false
 	match direction:
 		0:
 			$"AnimatedSprite".play("AttackDown")
@@ -65,13 +74,15 @@ func attack_animation(direction):
 			$"AnimatedSprite".flip_h
 			$Hitbox/AttackRight.disabled = false
 			isAttaking = true
-		
 	
 
 func _on_AnimatedSprite_animation_finished():
 	if ($"AnimatedSprite".animation == "AttackDown") or ($"AnimatedSprite".animation == "AttackUp") or ($"AnimatedSprite".animation == "AttackSide"):
-		$Hitbox/AttackDown.disabled = true
-		$Hitbox/AttackLeft.disabled = true
-		$Hitbox/AttackRight.disabled = true
-		$Hitbox/AttackUp.disabled = true
-		isAttaking = false 
+		DisabledAttack()
+		isAttaking = false
+
+func DisabledAttack():
+	$Hitbox/AttackDown.disabled = true
+	$Hitbox/AttackLeft.disabled = true
+	$Hitbox/AttackRight.disabled = true
+	$Hitbox/AttackUp.disabled = true

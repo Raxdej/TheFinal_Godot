@@ -111,10 +111,6 @@ region = Rect2( 256, 0, 32, 28 )
 atlas = ExtResource( 4 )
 region = Rect2( 288, 0, 32, 28 )
 
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 32, 28 )
-
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 29 )
 region = Rect2( 0, 0, 32, 28 )
@@ -155,6 +151,10 @@ region = Rect2( 256, 0, 32, 28 )
 atlas = ExtResource( 29 )
 region = Rect2( 288, 0, 32, 28 )
 
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 28 )
+
 [sub_resource type="SpriteFrames" id=31]
 animations = [ {
 "frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
@@ -167,6 +167,11 @@ animations = [ {
 "name": "MoveDown",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "MoveSide",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 33 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 11 ) ],
 "loop": false,
 "name": "AttackUp",
@@ -176,11 +181,6 @@ animations = [ {
 "loop": false,
 "name": "AttackDown",
 "speed": 7.0
-}, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
-"loop": true,
-"name": "MoveSide",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 28 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 25 ) ],
 "loop": false,

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/World1/GrassElements.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/World1/Tree.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/World1/Gass/Grass.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/World1/Enemies/Bat/Bat.tscn" type="PackedScene" id=5]
 
 [node name="Hyrule" type="Node2D"]
 
@@ -69,6 +70,51 @@ position = Vector2( 1000, -612 )
 scale = Vector2( 3, 3 )
 collision_mask = 2
 
+[node name="Tree11" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 1128, -233 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree12" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( -680, -662 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree14" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 859.999, -368 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree15" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 1015, -371 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree16" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 1014, -167 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree17" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 860, -170 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree18" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 909, -251 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree19" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 1106, -441 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
+[node name="Tree20" parent="YSort/Node" instance=ExtResource( 3 )]
+position = Vector2( 909, -449 )
+scale = Vector2( 3, 3 )
+collision_mask = 2
+
 [node name="Grass" type="YSort" parent="YSort"]
 
 [node name="Grass" parent="YSort/Grass" instance=ExtResource( 4 )]
@@ -88,3 +134,6 @@ position = Vector2( -1159, 64 )
 
 [node name="Grass6" parent="YSort/Grass" instance=ExtResource( 4 )]
 position = Vector2( -1093, 30 )
+
+[node name="Bat" parent="." instance=ExtResource( 5 )]
+position = Vector2( -176, -39 )
