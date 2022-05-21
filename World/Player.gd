@@ -31,9 +31,9 @@ func _process(delta):
 		direction = 0
 		DisabledAttack()
 		isAttaking = false
-	if Input.is_action_pressed("ui_accept") && (velocity == Vector2(0, 0)):
+	if Input.is_action_just_pressed("ui_accept") && (velocity == Vector2(0, 0)):
 		attack_animation(direction)
-		
+	
 	
 	
 	move_and_slide(velocity.normalized()*speed)
@@ -79,6 +79,7 @@ func attack_animation(direction):
 func _on_AnimatedSprite_animation_finished():
 	if ($"AnimatedSprite".animation == "AttackDown") or ($"AnimatedSprite".animation == "AttackUp") or ($"AnimatedSprite".animation == "AttackSide"):
 		DisabledAttack()
+		$"AnimatedSprite".frame = 0
 		isAttaking = false
 
 func DisabledAttack():

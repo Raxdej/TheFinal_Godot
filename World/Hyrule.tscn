@@ -16,6 +16,7 @@ collision_mask = 2
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -1249, -477 )
 
 [node name="Camera2D2" type="Camera2D" parent="YSort/Player"]
 current = true
@@ -176,6 +177,9 @@ position = Vector2( -763, 2025 )
 [node name="Grass" parent="YSort/Grass" instance=ExtResource( 4 )]
 position = Vector2( 299, 270 )
 
+[node name="Grass9" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( -814, 68 )
+
 [node name="Grass2" parent="YSort/Grass" instance=ExtResource( 4 )]
 position = Vector2( 233, 313 )
 
@@ -185,11 +189,35 @@ position = Vector2( 243, 382 )
 [node name="Grass4" parent="YSort/Grass" instance=ExtResource( 4 )]
 position = Vector2( -1223, 43 )
 
+[node name="Grass7" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( -1200, -367 )
+
+[node name="Grass8" parent="YSort/Grass" instance=ExtResource( 4 )]
+position = Vector2( -1164, -365 )
+
 [node name="Grass5" parent="YSort/Grass" instance=ExtResource( 4 )]
-position = Vector2( -1159, 64 )
+position = Vector2( -1168, 28 )
 
 [node name="Grass6" parent="YSort/Grass" instance=ExtResource( 4 )]
 position = Vector2( -1093, 30 )
 
 [node name="Bat" parent="." instance=ExtResource( 5 )]
-position = Vector2( -176, -39 )
+position = Vector2( 920, 609 )
+
+[node name="Bat2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 998, 485 )
+
+[node name="Bat3" parent="." instance=ExtResource( 5 )]
+position = Vector2( -88, -54 )
+
+[node name="Bat4" parent="." instance=ExtResource( 5 )]
+position = Vector2( -272, 715 )
+
+[node name="Bat5" parent="." instance=ExtResource( 5 )]
+position = Vector2( -953, 47 )
+
+[node name="Bat7" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1481, -565 )
+
+[node name="Bat6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 479, -358 )
