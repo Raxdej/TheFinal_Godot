@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://SpriteResources/SceneWorldSprite/hyptosis_tile-art-batch-5.png" type="Texture" id=1]
 [ext_resource path="res://TileSets/World.tres" type="TileSet" id=2]
@@ -359,6 +359,15 @@
 5/shapes = [  ]
 5/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 256.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 461, 13.0833 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10, 107.5 )
+
 [node name="GrassElements" type="TileMap"]
 position = Vector2( 2, 0 )
 scale = Vector2( 3, 3 )
@@ -387,7 +396,6 @@ format = 1
 tile_data = PoolIntArray( -917531, 3, 0, -917530, 1, 0, -851995, 0, 0, -851994, 2, 0, -786459, 1, 0, -786458, 4, 0, -720923, 2, 0, -720922, 5, 0, -655387, 4, 0, -655386, 1, 0, -589851, 5, 0, -589850, 2, 0, -524315, 4, 0, -524314, 1, 0, -458779, 5, 0, -458778, 2, 0, -20, 1, 0, -19, 3, 0, 65516, 4, 0, 65517, 1, 0, 131052, 5, 0, 131053, 2, 0, 196588, 1, 0, 196589, 4, 0, 262124, 2, 0, 262125, 5, 0, 327660, 4, 0, 327661, 1, 0, 393196, 5, 0, 393197, 2, 0, 458732, 1, 0, 458733, 4, 0, 524268, 2, 0, 524269, 5, 0, 589804, 4, 0, 589805, 1, 0, 655340, 5, 0, 655341, 2, 0, 720876, 4, 0, 720877, 1, 0, 786412, 5, 0, 786413, 2, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="DownRiver" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( 346.667, 5.66667 )
@@ -401,3 +409,15 @@ polygon = PoolVector2Array( -299.333, 97, -300.667, 305.667, -541.667, 305.333, 
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( -530.333, -151, -530, -156.667, -452.333, -155, -446.333, -150, -444, -151.333, -441, -168.667, -432.667, -172.333, -370.667, -170.667, -364.667, -163.333, -364, -29.3333, -255, -27.6667, -244.333, -26.6667, -238.667, -21.3333, -235.667, 89.3333, -236.333, 292.667, -238.333, 299.333, -247, 303.667, -267.333, 305, -266, 95, -250, 95.3333, -242, 87.6667, -242.333, -15.3333, -246.667, -23, -363, -22.6667, -363, -12, -376, 1.33333, -381, 1.33333, -380.333, -112.667, -371, -121, -369.667, -160.667, -374.333, -166, -431.667, -166.333, -437.333, -160.667, -438.333, -126.667, -438, -119, -431.667, -113, -412.333, -113, -412.667, 1.33333, -438.667, -0.333333, -444.667, -89.3333, -449.667, -88.6667, -450, -147.667, -454.667, -150.667, -530.667, -149.667, -530.333, -153 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 377.667, 224.167 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -83.6666, 492.917 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -554.333, 396.833 )
+shape = SubResource( 6 )
